@@ -132,7 +132,7 @@ const statutDemandeLabel: Record<DemandeApprobation['statut'], string> = {
   rejete: 'Rejetée',
 };
 
-const statutDemandeVariant: Record<DemandeApprobation['statut'], 'success' | 'warning' | 'danger' | 'default'> = {
+const statutDemandeVariant: Record<DemandeApprobation['statut'], 'success' | 'warning' | 'danger'> = {
   en_attente: 'warning',
   approuvee: 'success',
   rejete: 'danger',

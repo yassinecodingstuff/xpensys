@@ -16,7 +16,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '../../components/ui/Ca
 import Badge from '../../components/ui/Badge';
 import Avatar from '../../components/ui/Avatar';
 import Modal from '../../components/ui/Modal';
-import { financeItems, missions } from '../../data/mockData';
+import { financeItems, missions, categoriesDepense } from '../../data/mockData';
 
 const fmtCur = (n: number) =>
   new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
@@ -187,7 +187,9 @@ const FinanceMissionDetail: FC = () => {
                       {mission.depensesPrevues.map((dp, idx) => (
                         <tr key={idx} className="hover:bg-slate-50/60">
                           <td className="px-4 py-2 text-slate-700">{dp.description}</td>
-                          <td className="px-4 py-2 text-slate-600">{dp.categorie}</td>
+                          <td className="px-4 py-2 text-slate-600">
+                            {categoriesDepense.find((c) => c.id === dp.categorieId)?.nom ?? dp.categorieId}
+                          </td>
                           <td className="px-4 py-2 text-right font-semibold text-slate-900">{fmtCur(dp.montantEstime)}</td>
                           <td className="px-4 py-2 text-center">
                             <CheckCircle className="inline h-4 w-4 text-green-500" />

@@ -53,11 +53,11 @@ const categoryIconMap: Record<string, FC<{ className?: string }>> = {
 };
 
 const statusConfig = {
-  brouillon: { label: 'Brouillon', variant: 'default' as const, Icon: FileEdit },
+  brouillon: { label: 'Brouillon', variant: 'neutral' as const, Icon: FileEdit },
   en_attente: { label: 'En attente', variant: 'warning' as const, Icon: Clock },
   valide: { label: 'Approuvée', variant: 'success' as const, Icon: CheckCircle2 },
   refuse: { label: 'Rejetée', variant: 'danger' as const, Icon: XCircle },
-  demande_info: { label: "Demande d'info", variant: 'default' as const, Icon: HelpCircle },
+  demande_info: { label: "Demande d'info", variant: 'neutral' as const, Icon: HelpCircle },
   paye: { label: 'Remboursée', variant: 'success' as const, Icon: CheckCircle2 },
 };
 

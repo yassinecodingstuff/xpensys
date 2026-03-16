@@ -93,7 +93,7 @@ const SettingsDepartments: FC = () => {
   const getMemberCount = (deptName: string) =>
     mockUsers.filter((u) => u.departement === deptName).length;
 
-  const managers = mockUsers.filter((u) => u.role === 'manager' || u.role === 'admin');
+  const managers = mockUsers.filter((u) => u.role === 'Manager' || u.role === 'Admin');
 
   return (
     <div className="space-y-6">

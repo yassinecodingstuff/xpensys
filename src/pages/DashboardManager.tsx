@@ -529,7 +529,7 @@ const DashboardManager: FC = () => {
                       }
                     />
                     <Tooltip
-                      formatter={(value: number) => formatCurrency(value)}
+                      formatter={(value: number | undefined) => formatCurrency(value ?? 0)}
                       labelFormatter={(label) => `Catégorie : ${label}`}
                     />
                     <Legend

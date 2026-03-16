@@ -125,13 +125,13 @@ const eventLabel: Record<MissionEventType, string> = {
   comment: 'Commentaire',
 };
 
-const statutBadgeVariant: Record<string, 'success' | 'warning' | 'danger' | 'default'> = {
-  brouillon: 'default',
+const statutBadgeVariant: Record<string, 'success' | 'warning' | 'danger' | 'neutral'> = {
+  brouillon: 'neutral',
   en_attente: 'warning',
   valide: 'success',
   paye: 'success',
   refuse: 'danger',
-  demande_info: 'default',
+  demande_info: 'neutral',
 };
 
 const statutLabel: Record<string, string> = {
@@ -265,7 +265,7 @@ const ExpenseDetail: FC = () => {
               {/* Statut + badges tout en haut */}
               <div className="flex flex-wrap items-center justify-between gap-1.5">
                 <Badge
-                  variant={statutBadgeVariant[depense.statutRemboursement] ?? 'default'}
+                  variant={statutBadgeVariant[depense.statutRemboursement] ?? 'neutral'}
                   className="text-[10px] font-semibold"
                 >
                   {statutLabel[depense.statutRemboursement] ?? depense.statutRemboursement}
@@ -948,7 +948,7 @@ const ExpenseDetail: FC = () => {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-500">Statut rapprochement</span>
-                <Badge size="sm" variant="outline">
+                <Badge size="sm" variant="neutral">
                   {transaction.statut === 'rapprochee'
                     ? 'Rapprochée'
                     : transaction.statut === 'en_attente_justificatif'
