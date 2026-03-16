@@ -1,0 +1,7 @@
+/* Styles globaux spécifiques à l'app (optionnel).
+   Le layout est principalement géré par Tailwind. */
+
+#root {
+  width: 100%;
+}
+
